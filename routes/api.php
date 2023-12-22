@@ -18,9 +18,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('/contacts',[ContactController::class , 'index']);
-// Route::get('/contacts/list/{id}', [ContactController::class, 'show']);
-Route::post('/contacts/register', [ContactController::class, 'register']);
-// Route::post('/contacts', [ContactController::class, 'create']);
-// Route::delete('/contacts/{idContract}', [ContactController::class, 'destroy']);
-// Route::put('/contacts/{idContract}', [ContactController::class, 'update']);
+Route::get('',[ContactController::class , 'index']);
+Route::middleware('cors.methods')->post('/contacts/register', [ContactController::class, 'register']); // Llamar a cors.methods para que solo permita método POST Y GET

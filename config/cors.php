@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => ['http://localhost:4200','https://gianpierovasquez.cloud'], //SOLO PERMITIR ESTAS RUTAS
 
     'allowed_origins_patterns' => [],
 
